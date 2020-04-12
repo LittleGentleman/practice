@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WanAndroidDemo</string>
+
+    <string name="service_error">服务器出错啦</string>
+    <string name="not_found">请求资源不存</string>
+    <string name="timeout">请求超时</string>
+    <string name="unknown">未知错误</string>
+    <string name="network_error">网络异常</string>
+
+    <string name="action_sign_short">Sign in</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+</resources>

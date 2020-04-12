@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animationdemo01" />
+            <option value="$PROJECT_DIR$/animationdemo02" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/customviewgroupdemo01" />
+            <option value="$PROJECT_DIR$/dagger2" />
+            <option value="$PROJECT_DIR$/flowlayoutdemo" />
+            <option value="$PROJECT_DIR$/flowlayoutdemo02" />
+            <option value="$PROJECT_DIR$/javaio" />
+            <option value="$PROJECT_DIR$/kotlindemo" />
+            <option value="$PROJECT_DIR$/lambdademo" />
+            <option value="$PROJECT_DIR$/lazyfragmentdemo" />
+            <option value="$PROJECT_DIR$/librarytest" />
+            <option value="$PROJECT_DIR$/matrixdemo" />
+            <option value="$PROJECT_DIR$/mvpdagger2demo" />
+            <option value="$PROJECT_DIR$/mvpdemo" />
+            <option value="$PROJECT_DIR$/mvpdemo01" />
+            <option value="$PROJECT_DIR$/mvpdemo02" />
+            <option value="$PROJECT_DIR$/mvpdemo03" />
+            <option value="$PROJECT_DIR$/myactionbar" />
+            <option value="$PROJECT_DIR$/rxjava" />
+            <option value="$PROJECT_DIR$/rxjavademo" />
+            <option value="$PROJECT_DIR$/serializabledemo" />
+            <option value="$PROJECT_DIR$/shelladdproject" />
+            <option value="$PROJECT_DIR$/swipecardview" />
+            <option value="$PROJECT_DIR$/wanandroiddemo" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

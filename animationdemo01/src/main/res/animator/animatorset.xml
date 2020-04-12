@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:ordering="together">
+
+    <!--ObjectAnimator  可以指定哪个属性的动画-->
+    <objectAnimator
+        android:duration="3000"
+        android:propertyName="backgroundColor"
+        android:valueFrom="?attr/colorAccent"
+        android:valueTo="?attr/colorPrimary"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"/>
+
+    <objectAnimator
+        android:duration="3000"
+        android:propertyName="rotationY"
+        android:valueFrom="0"
+        android:valueTo="360"
+        android:valueType="floatType"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"/>
+
+    <objectAnimator
+        android:duration="3000"
+        android:propertyName="rotationX"
+        android:valueFrom="0"
+        android:valueTo="360"
+        android:valueType="floatType"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"/>
+
+    <objectAnimator
+        android:duration="3000"
+        android:propertyName="rotationZ"
+        android:valueFrom="0"
+        android:valueTo="360"
+        android:valueType="floatType"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"/>
+
+    <!--ValueAnimator  需要在代码里指定哪个属性的动画-->
+    <animator
+        android:duration="3000"
+        android:valueFrom="1.0f"
+        android:valueTo="3.0f"
+        android:valueType="floatType"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:startOffset="0"/>
+</set>
