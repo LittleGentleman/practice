@@ -27,11 +27,13 @@
             <option value="$PROJECT_DIR$/mvpdemo02" />
             <option value="$PROJECT_DIR$/mvpdemo03" />
             <option value="$PROJECT_DIR$/myactionbar" />
+            <option value="$PROJECT_DIR$/mylazyloadingfragment" />
             <option value="$PROJECT_DIR$/rxjava" />
             <option value="$PROJECT_DIR$/rxjavademo" />
             <option value="$PROJECT_DIR$/serializabledemo" />
             <option value="$PROJECT_DIR$/shelladdproject" />
             <option value="$PROJECT_DIR$/swipecardview" />
+            <option value="$PROJECT_DIR$/viewpagerwrap" />
             <option value="$PROJECT_DIR$/wanandroiddemo" />
           </set>
         </option>
