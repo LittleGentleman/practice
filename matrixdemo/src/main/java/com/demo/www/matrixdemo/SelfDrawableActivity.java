@@ -16,7 +16,7 @@ public class SelfDrawableActivity extends Activity {
 
         imageView = findViewById(R.id.imageView);
 
-        taskClearDrawable = new TaskClearDrawable(this,Utils.dp2px(400),Utils.dp2px(400));
+        taskClearDrawable = new TaskClearDrawable(this,Utils.dp2px(100),Utils.dp2px(100));
         imageView.setImageDrawable(taskClearDrawable);
 
         imageView.setOnClickListener(new View.OnClickListener() {

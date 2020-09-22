@@ -185,7 +185,7 @@ public class FlowLayout extends ViewGroup {
 
 
     @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
+    public boolean  onInterceptTouchEvent(MotionEvent ev) {
 
         boolean intercept = false;
         Log.e("TAG", "onInterceptTouchEvent: " + "ACTION_START");
@@ -201,9 +201,10 @@ public class FlowLayout extends ViewGroup {
                 break;
 
             case MotionEvent.ACTION_MOVE:
-
+                Log.e("TAG", "onInterceptTouchEvent: " + "ACTION_MOVE");
                 float dx = curInterceptX - mLastInterceptX;
                 float dy = curInterceptY - mLastInterceptY;
+                Log.e("TAG", "Math.abs(dy): "+Math.abs(dy)+",Math.abs(dx): "+Math.abs(dx) +",mTouchSlop: "+mTouchSlop );
                 if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > mTouchSlop) {
                     Log.e("TAG", "onInterceptTouchEvent: " + "ACTION_MOVE");
                     intercept = true;
@@ -304,4 +305,6 @@ public class FlowLayout extends ViewGroup {
             postInvalidateOnAnimation();
         }
     }
+
+
 }

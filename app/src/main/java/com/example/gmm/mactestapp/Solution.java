@@ -1,5 +1,6 @@
 package com.example.gmm.mactestapp;
 
+import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -126,6 +127,7 @@ public class Solution {
         }
 
         return Math.max(maxLength, s.length() - leftIndex);//s.length()-leftIndex //最后一组不含重复字符的字符串长度
+
     }
 
     /**
@@ -298,14 +300,14 @@ public class Solution {
         int currentValue;
         int valCount = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i]==val){
+            if (nums[i] == val) {
                 valCount++;
             }
         }
         for (int j = 0; j < nums.length - 1; j++) {
             int preIndex = j;
             currentValue = nums[preIndex + 1];
-            while (preIndex >= 0 && currentValue != val && nums[preIndex]==val) {
+            while (preIndex >= 0 && currentValue != val && nums[preIndex] == val) {
                 nums[preIndex + 1] = nums[preIndex];
                 preIndex--;
             }
@@ -325,10 +327,10 @@ public class Solution {
     }
 
     public int strStr(String haystack, String needle) {
-        if (needle.equals("")){
+        if (needle.equals("")) {
             return 0;
         }
-        if (haystack.contains(needle)){
+        if (haystack.contains(needle)) {
             return haystack.indexOf(needle);
 
         } else {
@@ -345,7 +347,7 @@ public class Solution {
             int count = 1;
             for (int j = 1; j < pre.length(); j++) {
                 char cc = pre.charAt(j);
-                if (c == cc){
+                if (c == cc) {
                     count++;
                 } else {
                     temp.append(count).append(c);
@@ -360,19 +362,59 @@ public class Solution {
         return pre;
     }
 
+    public static String simplifyPath(String path) {
+        if (path == null) {
+            return "";
+        }
+
+        String[] str = path.split("/");
+        Queue queue = new ArrayDeque();
+        for (int i = 0; i < str.length; i++) {
+            if (!str[i].equals("")) {
+                queue.offer(str[i]);
+            }
+        }
+        StringBuffer sb = new StringBuffer();//线程安全
+        sb.append("/");
+        while (queue.peek() != null) {
+            String s = (String) queue.poll();
+            if (s.equals(".")) {
+                continue;
+            } else if (s.equals("..")) {
+                String[] innerStr = sb.toString().split("/");
+                if (innerStr.length > 0 && !innerStr[innerStr.length-1].equals("")) {
+                    sb.replace(sb.toString().length() - innerStr[innerStr.length-1].length() - 1, sb.toString().length(), "");
+                }
+
+
+            } else {
+                sb.append(s);
+                sb.append("/");
+            }
+        }
+
+        if (sb.toString().length() < 1) {
+            return "/";
+        } else {
+            return sb.toString().substring(0, sb.toString().length() - 1);
+        }
+
+    }
+
     public static void main(String attrs[]) {
-        String[] array = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
-        int result = evalRPN(array);
-        System.out.println("结果=" + result);
+//        String[] array = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
+//        int result = evalRPN(array);
+//        System.out.println("结果=" + result);
+//
+//        System.out.println(decodeString("a3[a2[c]]"));
+//
+//        System.out.println("lengthOfLongestSubstring=" + lengthOfLongestSubstring("abcabcbb"));
+//
+//        System.out.println(longestPalindrome("ceabbbabbbaff"));
+//
+//        System.out.println(convert("LEETCODEISHIRING", 3));
 
-        System.out.println(decodeString("a3[a2[c]]"));
-
-        System.out.println("lengthOfLongestSubstring=" + lengthOfLongestSubstring("abcabcbb"));
-
-        System.out.println(longestPalindrome("ceabbbabbbaff"));
-
-        System.out.println(convert("LEETCODEISHIRING", 3));
-
+        System.out.println(simplifyPath("/a/./b/../../c/"));
 
     }
 
